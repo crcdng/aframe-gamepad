@@ -13,5 +13,6 @@ MIT License
 
 ## Third-Party Licenses
 
-Image credits: kin design         
+Image credits: kin design    
+https://github.com/n5ro/aframe-extras Copyright (c) 2016 Don McCurdy             
 A-Frame authors    
