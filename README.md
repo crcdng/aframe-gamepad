@@ -1,7 +1,14 @@
-Chrome Desktop: 
+# A-Frame Gamepad example
 
-works with Speed Link SL 6603 Joystick, Nintendo Gamepad clone
+WORK IN PROGRESS
 
-Chrome Mobile: not detected
+Example, demonstrating a USB Gamepad in [A-Frame](https://aframe.io/). Live at https://i3games.github.io/aframe-gamepad/
 
-works with Speed Link SL 6603 Joystick
+I use an Speed Link SL 6603 to move in the scene. This USB Joystick works with my Android device.
+
+MIT License 
+
+## Third-Party Licenses
+
+Image credits: kin design         
+A-Frame authors    
