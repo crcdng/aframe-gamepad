@@ -2,16 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello Gamepad</title>
+    <title>TTS</title>
+    <script src="aframe-v1.2.0.min.js"></script>
+    <script src="aframe-environment-component.min.js"></script>
+  
   </head>
   <body>
-    <div id="display"></div>
-    <script>
-      console.log("hello");
-    window.addEventListener("gamepadconnected", function(e) {
-      const s = `Gamepad connected at index ${e.gamepad.index}: ${e.gamepad.id}. ${e.gamepad.buttons.length} buttons, ${e.gamepad.axes.length} axes.`;
-      document.getElementById('display').innerHTML = "<p>hello</p>";
-    });
-    </script>
+    <!-- a scene with a sphere, a box, a cylinder, a plane, and a sky  -->
+    <a-scene>
+      <a-sphere raycastable position="0 1.25 -1" radius="1.25" color="#D2D2D2"></a-sphere>
+      <a-box raycastable position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4C4C4C"></a-box>
+      <a-cylinder raycastable position="1 0.75 1" radius="0.5" height="1.5" color="#878787"></a-cylinder>
+      <a-plane raycastable rotation="-90 0 0" width="4" height="4" src="vr.jpg"></a-plane>
+      <a-entity environment="preset: tron"></a-entity>
+      <a-entity position="0 0 3.8">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
   </body>
 </html>
