@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Gamepad</title>
+  </head>
+  <body>
+    <div id="display"></div>
+    <script>
+      console.log("hello");
+    window.addEventListener("gamepadconnected", function(e) {
+      const s = `Gamepad connected at index ${e.gamepad.index}: ${e.gamepad.id}. ${e.gamepad.buttons.length} buttons, ${e.gamepad.axes.length} axes.`;
+      document.getElementById('display').innerHTML = "<p>hello</p>";
+    });
+    </script>
+  </body>
+</html>
