@@ -15,9 +15,38 @@
       <a-cylinder raycastable position="1 0.75 1" radius="0.5" height="1.5" color="#878787"></a-cylinder>
       <a-plane raycastable position="0 0.1 0" rotation="-90 0 0" width="4" height="4" src="vr.jpg"></a-plane>
       <a-entity environment="preset: tron"></a-entity>
-      <a-entity id="rig" movement-controls="controls: gamepad" position="0 0 3.8">
+      <a-entity id="rig" movement-controls="controls: gamepad" position="0 0 3.8" 
+      sound="src: dododo.mp3; on: gamepadbuttondown:1">
         <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true"><a-cursor raycaster="objects: [data-raycastable]"></a-cursor></a-entity>
       </a-entity>
     </a-scene>
+    <script>
+      window.addEventListener("gamepadconnected", function(event) {
+        console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
+        event.gamepad.index, event.gamepad.id,
+        event.gamepad.buttons.length, event.gamepad.axes.length);
+      });
+      const el = document.getElementById('rig');
+      el.addEventListener('gamepadbuttondown', function (e) {
+        const button = e && e.detail && e.detail.index;
+        
+        switch(button) {
+        case 0:
+        // code block
+        break;
+        case 1:
+        // code block
+        break;
+        case 2:
+          el.object3D.rotation.y += Math.PI/2;
+        break;
+        case 3:
+          el.object3D.rotation.y -= Math.PI/2;
+        break;
+        default:
+        // code block
+        }; 
+      });
+    </script>
   </body>
 </html>
