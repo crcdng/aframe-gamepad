@@ -17,7 +17,9 @@ Left Triangle: 2
 Right Triangle: 3
 ```
 
-Joystick to move, triangular shoulder buttons to rotate. 
+Other gamepads have different values. 
+
+In this example the joystick is used to move and the triangular shoulder buttons to rotate. Left button toggles the color of the element (cube, sphere, cylinder) under the cursor. Right button triggers a sound.
 
 
 
